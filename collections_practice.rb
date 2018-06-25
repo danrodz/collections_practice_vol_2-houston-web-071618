@@ -61,8 +61,9 @@ end
 
 def merge_data(collection1, collection2)
   new_collection = []
-  new_collection.push(collection1, collection2)
-  new_collection.flatten
+  collection1.each do |name|
+    new_collection.push(name)
+  end
 end
 
 let(:keys) {
