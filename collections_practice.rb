@@ -44,7 +44,7 @@ def count_elements(collection)
   end
   
   new_collection.sort! do |x,y| 
-    y[:name] <=> x[:name] 
+    x[:name] <=> y[:name] 
   end
   
   i = 0
