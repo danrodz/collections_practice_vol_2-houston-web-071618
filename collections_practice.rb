@@ -60,7 +60,7 @@ def count_elements(collection)
 end
 
 def merge_data(collection1, collection2)
-  [collection2, collection1].map { |arr| arr.group_by { |e| e[:key] } }
+  [collection2.flatten, collection1].map { |arr| arr.group_by { |e| e[:key] } }
       .reduce(&:merge)
       .flat_map(&:last)
 end
