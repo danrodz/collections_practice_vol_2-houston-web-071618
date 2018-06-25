@@ -39,27 +39,20 @@ end
 def count_elements(collection)
   new_collection = []
   
-  collection.each do |element|
+  collection.each.with_index do |element, index|
     if new_collection.length == 0 
       new_collection.push({:name => element[:name], :count => 1})
-    elsif new_collection.length == 1
-      if new_collection[0][:name] == element[:name]
+    else
+      i = 0
+      while i < index 
+      if new_collection[i][:name] == element[:name]
           new_collection[i][:count] += 1
       else
         new_collection.push({:name => element[:name], :count => 1})
       end
-    else
-      i = 0
-      while i < new_collection.length
-        i += 1
-        if new_collection[i-1][:name] == element[:name]
-          new_collection[i-1][:count] += 1
-        else
-          new_collection.push({:name => element[:name], :count => 1})
-        end
-      end
+      i++
     end
-    end
+  end
   new_collection
 end
 
