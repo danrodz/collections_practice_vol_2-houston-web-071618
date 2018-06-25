@@ -38,12 +38,11 @@ end
 
 def count_elements(collection)
   new_collection = []
-  
+  i = 0
   collection.each.with_index do |element, index|
     if new_collection.length == 0 
       new_collection.push({:name => element[:name], :count => 1})
     else
-      i = 0
       while i < index 
         if new_collection[i][:name] == element[:name]
           new_collection[i][:count] += 1
