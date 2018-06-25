@@ -59,8 +59,8 @@ def count_elements(collection)
   new_collection    
 end
 
-def merge_data(collection)
-  collection.flatten!
+def merge_data(collection1, collection2)
+  new_collection = collection1 + collection2
 end
 
 
