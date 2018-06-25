@@ -51,7 +51,7 @@ def count_elements(collection)
         else
           new_collection.push({:name => element[:name], :count => 1})
         end
-        i++
+        i+=1
       end
       end
     end
