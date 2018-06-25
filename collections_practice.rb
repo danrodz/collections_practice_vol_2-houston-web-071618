@@ -45,7 +45,7 @@ def count_elements(collection)
   while i < new_collection.length - 2
     if new_collection[i][:name] == new_collection[i + 1][:name]
       new_collection[i][:count] += 1 
-      new_collection
+      new_collection.delete_at
     end
   end
          
