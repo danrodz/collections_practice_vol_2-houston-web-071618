@@ -37,12 +37,16 @@ end
 
 
 def count_elements(collection)
-  new_collection = collection.map do |element|
-    {:name => element[:name], :count => 1}
+  new_collection = []
+  
+  collection.each do |element|
+   new_collection.push({:name => element[:name], :count => 1})
   end
   
-  i = 0 
-  while i < new_collection.length - 2
+  i = 0
+  new_collection_length = new_collection.length - 2
+  
+  while i < new_collection_length
     if new_collection[i][:name] == new_collection[i + 1][:name]
       new_collection[i][:count] += 1 
       new_collection.delete_at(i + 1)
