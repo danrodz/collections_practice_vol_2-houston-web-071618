@@ -37,25 +37,13 @@ end
 
 
 def count_elements(collection)
-  new_collection = []
-  i = 0
-  
-  collection.each.with_index do |element, index|
-    if new_collection.length > 0
-      while i < index 
-        if new_collection[i][:name] == element[:name]
-          new_collection[i][:count] += 1
-          i += 1 
-        else
-          new_collection.push({:name => element[:name], :count => 1})
-          i += 1
-        end
-      end
-    else
-      new_collection.push({:name => element[:name], :count => 1})
-    end
+  new_collection = collection.map do |element|
+    {:name => element[:name], :count => 1}
   end
-  new_collection
+  
+  i = 0 
+  while 
+         
 end
 
 
