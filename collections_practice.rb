@@ -43,6 +43,10 @@ def count_elements(collection)
    new_collection.push({:name => element[:name], :count => 1})
   end
   
+  new_collection.sort! do |x,y| 
+    y[:name] <=> x[:name] 
+  end
+  
   i = 0
   while i < new_collection.length - 2
     if new_collection[i][:name] == new_collection[i + 1][:name]
