@@ -49,7 +49,8 @@ def count_elements(collection)
     end
     i += 1
   end
-         
+  
+  new_collection    
 end
 
 
