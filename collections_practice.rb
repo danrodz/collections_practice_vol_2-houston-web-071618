@@ -60,17 +60,5 @@ def count_elements(collection)
 end
 
 def merge_data(collection1, collection2)
-  new_collection = []
-  collection1.each do |name|
-    new_collection.push(name)
-  end
-  
-  collection2.each do |obj|
-    flatten_obj = obj.flatten
-    new_collection.each.with_index do |new_obj, index|
-      if new_obj[:first_name] == flatten_obj[0]
-        new_collection[index].merge!(flatten_obj.response[:first_name])
-      end
-    end
-  end
+  collection2.merge(collection1)
 end
