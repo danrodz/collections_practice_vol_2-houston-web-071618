@@ -60,5 +60,5 @@ def count_elements(collection)
 end
 
 def merge_data(collection1, collection2)
-  collection2.merge(collection1)
+  collection2.flatten.merge(collection1.flatten)
 end
