@@ -45,12 +45,13 @@ def count_elements(collection)
     else
       i = 0
       while i < index 
-      if new_collection[i][:name] == element[:name]
+        if new_collection[i][:name] == element[:name]
           new_collection[i][:count] += 1
-      else
-        new_collection.push({:name => element[:name], :count => 1})
-      end
-      i++
+          i += 1 
+        else
+          new_collection.push({:name => element[:name], :count => 1})
+          i += 1
+        end
     end
   end
   new_collection
