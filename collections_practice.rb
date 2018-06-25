@@ -59,7 +59,8 @@ def count_elements(collection)
   new_collection    
 end
 
-def merge_data(collection1, collection2)
+def merge_data(collection)
+  collection.
   
 end
 
