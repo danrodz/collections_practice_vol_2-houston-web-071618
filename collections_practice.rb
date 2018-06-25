@@ -60,7 +60,9 @@ def count_elements(collection)
 end
 
 def merge_data(collection1, collection2)
-  new_collection = collection1 + collection2
+  new_collection = []
+  new_collection.push(collection1, collection2)
+  new_collection.flatten
 end
 
 
