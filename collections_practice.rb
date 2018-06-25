@@ -42,7 +42,12 @@ def count_elements(collection)
   end
   
   i = 0 
-  while 
+  while i < new_collection.length - 2
+    if new_collection[i][:name] == new_collection[i + 1][:name]
+      new_collection[i][:count] += 1 
+      new_collection
+    end
+  end
          
 end
 
