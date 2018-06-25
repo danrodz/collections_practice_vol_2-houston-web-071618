@@ -48,11 +48,10 @@ def count_elements(collection)
         
         if new_collection[i][:name] == element[:name]
           new_collection[i][:count] += 1
-          i += 1
         else
           new_collection.push({:name => element[:name], :count => 1})
-          i += 1
         end
+        i++
       end
       end
     end
