@@ -69,7 +69,7 @@ def merge_data(collection1, collection2)
     flatten_obj = obj.flatten
     new_collection.each |new_obj|
       if new_obj[:first_name] == flatten_obj[0]
-        
+        new_obj.me
     end
   end
 end
